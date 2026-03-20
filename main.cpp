@@ -14,7 +14,18 @@ int main() {
 	cin >> choice;
 
 	if (choice == 1) {
-	system("cls");
+		system("cls");
+		cout << "\n\n[ + ] Фигура: \"Линия\"\n\n";
+		cout << "Горизонтальная\n";
+		cout << "Вертикальная\n";
+		cout << "Выберите тип: ";
+		cin >> type;
 
-	} 
+		cout << "\n Длина: ";
+		cin >> length;
 
+		cout << "Текстура: ";
+		cin >> texture;
+
+		cout << 
+	}
