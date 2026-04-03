@@ -27,5 +27,11 @@ int main() {
 		cout << "Текстура: ";
 		cin >> texture;
 
-		cout << 
-	}
+		cout << "\n\n[+] Результат: \n\n";
+		if (type == 1) {
+
+			for (int i = 0; i < length; i++) {
+				cout << " " << texture << " ";
+        } 
+			cout << "\n";
+}
