@@ -32,6 +32,38 @@ int main() {
 
 			for (int i = 0; i < length; i++) {
 				cout << " " << texture << " ";
-        } 
+			}
 			cout << "\n";
-}
+		}
+		else if (type == 2) {
+
+			for (int i = 0; i < length; i++) {
+				cout << " " << texture << "\n";
+			}
+		}
+	}
+	else if (choice == 2) {
+		system("cls");
+		cout << "\n\n[+] Фигура: \"Квадрат\"\n\n";
+		cout << "[ + ] Заполненный\n";
+		cout << "[ + ] Пустой\n\n";
+		cout << "[ + ] Выберите тип: ";
+		cin >> type;
+
+		cout << "\n[+] Размер:";
+		cin >> size;
+		cout << "[ + ] Текстура: ";
+		cin >> texture;
+
+		cout << "\n\n[+] Результат: \n\n";
+
+
+		if (type == 1) {
+			for (int i = 0; i < size; i++) {
+				for (int j = 0; j < size; j++) {
+					cout << texture << " ";
+				}
+				cout << "\n";
+			}
+		}
+	}
