@@ -1,5 +1,3 @@
-#include <iostream>
-using namespace std;
 
 int main() {
 	setlocale(0, "");
@@ -67,3 +65,35 @@ int main() {
 			}
 		}
 	}
+
+	if (choice == 3) {
+		int width;
+		int height;
+		system("cls");
+		cout << "\n\n[ + ] Фигура: “Прямоугольник”\n";
+		cout << " Заполненный\n";
+		cout << " Пустой\n";
+		cout << " Выберите тип: ";
+		cin >> type;
+		cout << "\n Ширина: ";
+		cin >> width;
+		cout << " Высота: ";
+		cin >> height;
+	}
+
+	cout << "Текстура: ";
+	cin >> texture;
+	cout << "\n\n Результат:\n\n";
+	if (type == 1) {
+
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < width; j++) {
+				cout << texture << " ";
+			}
+
+		}
+
+	} 
+
+
+}
