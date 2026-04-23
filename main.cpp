@@ -1,99 +1,131 @@
+#include <iostream>
+using namespace std;
 
 int main() {
-	setlocale(0, "");
-	int choice, type, size, length;
-	char texture;
+    setlocale(0, "");
+    int choice, type, size, length;
+    char texture;
 
-	cout << "Программа - \"Геометрические формы\"\n\n";
-	cout << "Линия\n";
-	cout << "Квадрат\n";
-	cout << "Прямоугольник\n";
-	cout << "Выберите фигуру\n";
-	cin >> choice;
+    cout << "[ + ] Программа - \"Геометрические фигуры\"\n\n";
+    cout << "[ 1 ] Линия\n";
+    cout << "[ 2 ] Квадрат\n";
+    cout << "[ 3 ] Прямоугольник\n";
+    cout << "[ + ] Выберите фигуру: ";
+    cin >> choice;
 
-	if (choice == 1) {
-		system("cls");
-		cout << "\n\n[ + ] Фигура: \"Линия\"\n\n";
-		cout << "Горизонтальная\n";
-		cout << "Вертикальная\n";
-		cout << "Выберите тип: ";
-		cin >> type;
+    if (choice == 1) {
+        system("cls");
+        cout << "\n\n[ + ] Фигура: \"Линия\"\n\n";
+        cout << "[ 1 ] Горизонтальная\n";
+        cout << "[ 2 ] Вертикальная\n\n";
+        cout << "[ + ] Выберите тип: ";
+        cin >> type;
 
-		cout << "\n Длина: ";
-		cin >> length;
+        cout << "\n[ + ] Длина: ";
+        cin >> length;
 
-		cout << "Текстура: ";
-		cin >> texture;
-
-		cout << "\n\n[+] Результат: \n\n";
-		if (type == 1) {
-
-			for (int i = 0; i < length; i++) {
-				cout << " " << texture << " ";
-			}
-			cout << "\n";
-		}
-		else if (type == 2) {
-
-			for (int i = 0; i < length; i++) {
-				cout << " " << texture << "\n";
-			}
-		}
-	}
-	else if (choice == 2) {
-		system("cls");
-		cout << "\n\n[+] Фигура: \"Квадрат\"\n\n";
-		cout << "[ + ] Заполненный\n";
-		cout << "[ + ] Пустой\n\n";
-		cout << "[ + ] Выберите тип: ";
-		cin >> type;
-
-		cout << "\n[+] Размер:";
-		cin >> size;
-		cout << "[ + ] Текстура: ";
-		cin >> texture;
-
-		cout << "\n\n[+] Результат: \n\n";
+        cout << "[ + ] Текстура: ";
+        cin >> texture;
 
 
-		if (type == 1) {
-			for (int i = 0; i < size; i++) {
-				for (int j = 0; j < size; j++) {
-					cout << texture << " ";
-				}
-				cout << "\n";
-			}
-		}
-	}
+        cout << "\n\n[ + ] Результат:\n\n";
+        if (type == 1) {
 
-	if (choice == 3) {
-		int width;
-		int height;
-		system("cls");
-		cout << "\n\n[ + ] Фигура: “Прямоугольник”\n";
-		cout << " Заполненный\n";
-		cout << " Пустой\n";
-		cout << " Выберите тип: ";
-		cin >> type;
-		cout << "\n Ширина: ";
-		cin >> width;
-		cout << " Высота: ";
-		cin >> height;
-	}
+            for (int i = 0; i < length; i++) {
+                cout << " " << texture << " ";
+            }
+            cout << "\n";
+        }
+        else if (type == 2) {
 
-	cout << "Текстура: ";
-	cin >> texture;
-	cout << "\n\n Результат:\n\n";
-	if (type == 1) {
+            for (int i = 0; i < length; i++) {
+                cout << " " << texture << "\n";
+            }
+        }
+    }
+    else if (choice == 2) {
+        system("cls");
+        cout << "\n\n[ + ] Фигура: \"Квадрат\"\n\n";
+        cout << "[ 1 ] Заполненный\n";
+        cout << "[ 2 ] Пустой\n\n";
+        cout << "[ + ] Выберите тип: ";
+        cin >> type;
 
-		for (int i = 0; i < height; i++) {
-			for (int j = 0; j < width; j++) {
-				cout << texture << " ";
-			}
+        cout << "\n[ + ] Размер: ";
+        cin >> size;
+        cout << "[ + ] Текстура: ";
+        cin >> texture;
 
-		}
+        cout << "\n\n[ + ] Результат:\n\n";
 
-	} 
+        if (type == 1) {
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < size; j++) {
+                    cout << texture << " ";
+                }
+                cout << "\n";
+            }
+        }
+        else if (type == 2) {
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < size; j++) {
+                    if (i == 0 || i == size - 1 || j == 0 || j == size - 1) {
+                        cout << texture << " ";
+                    }
+                    else {
+                        cout << "  ";
+                    }
+                }
+                cout << "\n";
+            }
 
 
+
+        }
+    }
+    if (choice == 3) {
+        int width;
+        int height;
+        system("cls");
+        cout << "\n\n[ + ] Фигура: “Прямоугольник”\n";
+        cout << "[ 1 ] Заполненный\n";
+        cout << "[ 2 ] Пустой\n\n";
+        cout << "[ + ] Выберите тип: ";
+        cin >> type;
+        cout << "\n[ + ] Ширина: ";
+        cin >> width;
+        cout << "[ + ] Высота: ";
+        cin >> height;
+
+        cout << "[ + ] Текстура: ";
+        cin >> texture;
+        cout << "\n\n[ + ] Результат:\n\n";
+        if (type == 1) {
+
+            for (int i = 0; i < height; i++) {
+                for (int j = 0; j < width; j++) {
+                    cout << texture << " ";
+                }
+                cout << "\n";
+            }
+        }
+        else if (type == 2) {
+
+            for (int i = 0; i < height; i++) {
+                for (int j = 0; j < width; j++) {
+                    if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
+                        cout << texture << " ";
+                    }
+                    else {
+                        cout << "  ";
+                    }
+                }
+                cout << "\n";
+            }
+        }
+
+
+
+        return 0;
+    }
 }
